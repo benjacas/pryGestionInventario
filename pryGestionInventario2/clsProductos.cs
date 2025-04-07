@@ -37,7 +37,7 @@ namespace pryGestionInventario2
             DataSet DS = new DataSet();
             adaptador.Fill(DS);
 
-            //cierra la base de datos
+            //cierra la base de datosss
             conexion.Close();ddddddd
         }*/
     }
