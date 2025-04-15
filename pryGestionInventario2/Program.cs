@@ -16,7 +16,7 @@ namespace pryGestionInventario2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmProducto());
+            Application.Run(new frmMenu());
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryGestionInventario2
 {
-    public partial class frmProducto : Form
+    public partial class frmMenu : Form
     {
-        public frmProducto()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -20,6 +20,27 @@ namespace pryGestionInventario2
         private void frmProducto_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void agregarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarProducto v = new frmAgregarProducto();
+            v.ShowDialog();
+        }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

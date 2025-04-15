@@ -6,39 +6,119 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace pryGestionInventario2
 {
     internal class clsProductos
     {
-        //conexion con la base de datos
-        private OleDbConnection conexion = new OleDbConnection();
-        //se manda un comando con este objeto a la base de datos
-        private OleDbCommand comando = new OleDbCommand();
-        //adatpa el comando a un formato comprensible por .NET
-        private OleDbDataAdapter adaptador = new OleDbDataAdapter();
+        private clsConexionBD Conexion;
+        public int Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public decimal Precio { get; set; }
+        public int Stock { get; set; }
+        public int CategoriaId { get; set; }
 
-        //private string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Clientes.mdb";
-        private string cadenaConexion = "Proveedor de datos .NET Framework para ODBC";
-        private string tabla = "Clientes";
-
-        /*public void listar(DataGridView grilla)
+        public clsProductos()
         {
-            //se le da la direccion de la base de datos
-            conexion.ConnectionString = cadenaConexion;
-            //abre la conexion con la base de datos
-            conexion.Open();
+            Conexion = new clsConexionBD();
+            
+        }
 
-            comando.Connection = conexion;
-            comando.CommandType = CommandType.TableDirect;
-            comando.CommandText = tabla;
+        public void AgregarProducto(clsProductos producto)
+        {
+            try
+            {
+                string query = "INSERT INTO Productos (Nombre, Descripcion, Precio, Stock, CategoriaId) " +
+                               "VALUES (@Nombre, @Descripcion, @Precio, @Stock, @CategoriaId)";
 
-            adaptador = new OleDbDataAdapter(comando);
-            DataSet DS = new DataSet();
-            adaptador.Fill(DS);
+                SqlCommand comando = new SqlCommand(query);
+                comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
+                comando.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+                comando.Parameters.AddWithValue("@Precio", producto.Precio);
+                comando.Parameters.AddWithValue("@Stock", producto.Stock);
+                comando.Parameters.AddWithValue("@CategoriaId", producto.CategoriaId);
 
-            //cierra la base de datosss
-            conexion.Close();ddddddd
-        }*/
+                Conexion.EjecutarComando(comando);
+                MessageBox.Show("Producto agregado correctamente.");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error al agregar producto: " + error.Message);
+            }
+        }
+
+
+        public DataTable ObtenerProductos()
+        {
+            string query = "SELECT p.Codigo, p.Nombre, p.Descripcion, p.Precio, p.Stock, c.Nombre AS Categoria " +
+                           "FROM Productos p INNER JOIN Categorias c ON p.CategoriaId = c.Id";
+            SqlCommand comando = new SqlCommand(query);
+            return Conexion.EjecutarConsulta(comando);
+        }
+
+
+        public DataTable BuscarProductoPorTexto(string texto)
+        {
+            string query = "SELECT p.Codigo, p.Nombre, p.Descripcion, p.Precio, p.Stock, c.Nombre AS Categoria " +
+                           "FROM Productos p INNER JOIN Categorias c ON p.CategoriaId = c.Id " +
+                           "WHERE p.Nombre LIKE @Texto OR p.Codigo LIKE @Texto";
+
+            SqlCommand comando = new SqlCommand(query);
+            comando.Parameters.AddWithValue("@Texto", "%" + texto + "%");
+            return Conexion.EjecutarConsulta(comando);
+        }
+
+
+        public void ModificarProducto(clsProductos producto)
+        {
+            try
+            {
+                string query = "UPDATE Productos SET Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio, " +
+                               "Stock = @Stock, CategoriaId = @CategoriaId WHERE Codigo = @Codigo";
+
+                SqlCommand comando = new SqlCommand(query);
+                comando.Parameters.AddWithValue("@Codigo", producto.Codigo);
+                comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
+                comando.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+                comando.Parameters.AddWithValue("@Precio", producto.Precio);
+                comando.Parameters.AddWithValue("@Stock", producto.Stock);
+                comando.Parameters.AddWithValue("@CategoriaId", producto.CategoriaId);
+
+                Conexion.EjecutarComando(comando);
+                MessageBox.Show("Producto modificado correctamente.");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error al modificar producto: " + error.Message);
+            }
+        }
+
+        public void EliminarProductoPorNombre(string nombreProducto)
+        {
+            try
+            {
+                string query = "DELETE FROM Productos WHERE Nombre = @Nombre";
+                SqlCommand comando = new SqlCommand(query);
+                comando.Parameters.AddWithValue("@Nombre", nombreProducto);
+
+                Conexion.EjecutarComando(comando);
+                MessageBox.Show("Producto eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar producto: " + ex.Message);
+            }
+        }
+
+
+        public DataTable ObtenerCategorias()
+        {
+            string query = "SELECT Id, Nombre FROM Categorias";
+            SqlCommand comando = new SqlCommand(query);
+            return Conexion.EjecutarConsulta(comando);
+        }
+
     }
 }
