@@ -17,7 +17,7 @@ namespace pryGestionInventario2
         {
             InitializeComponent();
         }
-        private clsProductos Productos = new clsProductos();
+        private clsProductos nuevoProducto = new clsProductos();
         
         private void frmAgregarProducto_Load(object sender, EventArgs e)
         {
@@ -29,22 +29,20 @@ namespace pryGestionInventario2
         {
             try
             {
-                clsProductos nuevoProducto = new clsProductos
-                {
-                    Nombre = txtNombre.Text.Trim(),
-                    Descripcion = txtDescripcion.Text.Trim(),
-                    Precio = numPrecio.Value > 0 ? numPrecio.Value : 0,
-                    Stock = numStock.Value > 0 ? (int)numStock.Value : 0,
-                    CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue)
-                };
+                string nombre=txtNombre.Text;
+                string desc = txtDescripcion.Text;
+                string stock = Convert.ToString(numStock.Value);
+                string precio = Convert.ToString(numPrecio.Value);
 
-                Productos.AgregarProducto(nuevoProducto);
+                //PORTERMINARRRRDataTable Resultados = nuevoProducto.AgregarProducto()
+
+                /*Productos.AgregarProducto(nuevoProducto);
                 CargarProductos();
                 txtNombre.Clear();
                 txtDescripcion.Clear();
                 numPrecio.Value = 0;
                 numStock.Value = 0;
-                cmbCategorias.SelectedIndex = -1;
+                cmbCategorias.SelectedIndex = -1;*/
             }
             catch (Exception ex)
             {
@@ -64,7 +62,7 @@ namespace pryGestionInventario2
 
         public void CargarCategorias()
         {
-            DataTable categorias = Productos.ObtenerCategorias();
+            DataTable categorias = nuevoProducto.ObtenerCategorias();
             if (categorias != null)
             {
                 DataRow row = categorias.NewRow();
@@ -81,7 +79,7 @@ namespace pryGestionInventario2
 
         public void CargarProductos()
         {
-            DataTable productos = Productos.ObtenerProductos();
+            DataTable productos = nuevoProducto.ObtenerProductos();
             if (productos != null)
             {
                 dgvProductos.DataSource = productos;

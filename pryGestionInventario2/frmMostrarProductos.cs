@@ -28,7 +28,15 @@ namespace pryGestionInventario2
             if (productos != null)
             {
                 dgvProductos.DataSource = productos;
+
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombre=txtBuscarNombre.Text;
+            DataTable Resultados= Productos.BuscarProductoPorTexto(nombre);
+            dgvProductos.DataSource= Resultados;
         }
     }
 }
