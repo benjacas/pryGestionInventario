@@ -19,24 +19,21 @@ namespace pryGestionInventario2
 
         public string cadenaConexion = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
 
-        private SqlConnection conexion;//representa la conexion a la base de datos
+        private SqlConnection conexion=new SqlConnection();//representa la conexion a la base de datos
 
         public string nombreBaseDeDatos;//variable donde se guarda el nombre de la base de datos
 
         //constructor
         public clsConexionBD()
         {
-           //No parece necesaria, ya que se usa mas abajo
-           //conexion = new SqlConnection(cadenaConexion); //se crea una nueva conexión con la cadena definida.
+           conexion = new SqlConnection(cadenaConexion); //se crea una nueva conexión con la cadena definida.
         }
         public void ConectarBD()
         {
             try
             {
-                conexion = new SqlConnection(cadenaConexion);//se crea una nueva conexión con la cadena definida.
-
-                conexion.Open();//Abre la conexion, si tiene un error, se va al catch
                 nombreBaseDeDatos = conexion.Database;
+                conexion.Open();//Abre la conexion, si tiene un error, se va al catch
 
                 MessageBox.Show("Conectado a " + nombreBaseDeDatos);
             }
@@ -85,6 +82,7 @@ namespace pryGestionInventario2
             DataTable dt = new DataTable();//crea una tabla en memoria para guardar los resultados
             try
             {
+                
                 comando.Connection = conexion;//asocia el comando a la conexion
                 conexion.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(comando);//el SqlDataAdapter ejecuta la consulta y llena el DataTable con los datos obtenidos.

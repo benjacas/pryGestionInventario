@@ -12,7 +12,7 @@ namespace pryGestionInventario2
 {
     internal class clsProductos
     {
-        private clsConexionBD Conexion;
+        private clsConexionBD Conexion = new clsConexionBD();
         public int Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
@@ -22,6 +22,7 @@ namespace pryGestionInventario2
 
         public clsProductos()
         {
+
             Conexion = new clsConexionBD();
             
         }
@@ -29,6 +30,11 @@ namespace pryGestionInventario2
 
         public DataTable ObtenerProductos()
         {
+            /*if (Conexion == null)
+            {
+                Conexion = new clsConexionBD();
+            }*/
+                
             string query = "SELECT p.Codigo, p.Nombre, p.Descripcion, p.Precio, p.Stock, c.Nombre AS Categoria " +
                            "FROM Productos p INNER JOIN Categorias c ON p.CategoriaId = c.Id";//Hace un INNER JOIN para traer también el nombre de la categoría desde la tabla Categorias
             SqlCommand comando = new SqlCommand(query);//crea el comando con la consulta
