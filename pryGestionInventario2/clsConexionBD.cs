@@ -11,26 +11,32 @@ using System.Diagnostics;
 namespace pryGestionInventario2
 {
     public class clsConexionBD
-    {
+    {   /*
+         Server=localhost: el servidor está en tu compu local.
+        Database=Productos: conecta a la base llamada Productos.
+        Trusted_Connection=True: usa la autenticación de Windows (no usuario/contraseña).
+        */
+
         public string cadenaConexion = "Server=localhost;Database=Productos;Trusted_Connection=True;";
 
-        private SqlConnection conexion;
+        private SqlConnection conexion;//representa la conexion a la base de datos
 
-        public string nombreBaseDeDatos;
+        public string nombreBaseDeDatos;//variable donde se guarda el nombre de la base de datos
 
+        //constructor
         public clsConexionBD()
         {
-            conexion = new SqlConnection(cadenaConexion);
+           //No parece necesaria, ya que se usa mas abajo
+           //conexion = new SqlConnection(cadenaConexion); //se crea una nueva conexión con la cadena definida.
         }
         public void ConectarBD()
         {
             try
             {
-                conexion = new SqlConnection(cadenaConexion);
+                conexion = new SqlConnection(cadenaConexion);//se crea una nueva conexión con la cadena definida.
 
+                conexion.Open();//Abre la conexion, si tiene un error, se va al catch
                 nombreBaseDeDatos = conexion.Database;
-
-                conexion.Open();
 
                 MessageBox.Show("Conectado a " + nombreBaseDeDatos);
             }
@@ -40,13 +46,21 @@ namespace pryGestionInventario2
             }
         }
 
+
+        /*
+         Este método ejecuta comandos SQL que no devuelven resultados como:
+         INSERT
+         UPDATE
+         DELETE
+         instruccioes que solo modifica datoss
+         */
         public void EjecutarComando(SqlCommand comando)
         {
             try
             {
-                comando.Connection = conexion;
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                comando.Connection = conexion;//le dice al SqlCommand que use esa conexión
+                conexion.Open();//abre la conexion con la base
+                comando.ExecuteNonQuery(); //ejecuta el comando.ExecuteNonQuery() se usa para comandos que no devuelven filas
             }
             catch (Exception ex)
             {
@@ -54,19 +68,27 @@ namespace pryGestionInventario2
             }
             finally
             {
-                conexion.Close();
+                conexion.Close();//cierra conexion
             }
         }
 
+
+        /*
+         * Este método sirve para consultas que sí devuelven datos, como:
+
+        SELECT * FROM Productos
+        SELECT Nombre, Precio FROM Productos WHERE Precio > 100
+        Devuelve un DataTable con los resultados.
+         */
         public DataTable EjecutarConsulta(SqlCommand comando)
         {
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable();//crea una tabla en memoria para guardar los resultados
             try
             {
-                comando.Connection = conexion;
+                comando.Connection = conexion;//asocia el comando a la conexion
                 conexion.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(comando);
-                adapter.Fill(dt);
+                SqlDataAdapter adapter = new SqlDataAdapter(comando);//el SqlDataAdapter ejecuta la consulta y llena el DataTable con los datos obtenidos.
+                adapter.Fill(dt);//devuelve la tabla con los resultados para que puedas mostrarlos, recorrerlos, etc
             }
             catch (Exception ex)
             {
