@@ -17,8 +17,8 @@ namespace pryGestionInventario2
         {
             InitializeComponent();
         }
-        private clsProductos productosBD = new clsProductos();
-        private ToolTip toolTip1 = new ToolTip();
+        private clsProductos Productos = new clsProductos();
+        
         private void frmAgregarProducto_Load(object sender, EventArgs e)
         {
             CargarCategorias();
@@ -38,7 +38,7 @@ namespace pryGestionInventario2
                     CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue)
                 };
 
-                productosBD.AgregarProducto(nuevoProducto);
+                Productos.AgregarProducto(nuevoProducto);
                 CargarProductos();
                 txtNombre.Clear();
                 txtDescripcion.Clear();
@@ -64,7 +64,7 @@ namespace pryGestionInventario2
 
         public void CargarCategorias()
         {
-            DataTable categorias = productosBD.ObtenerCategorias();
+            DataTable categorias = Productos.ObtenerCategorias();
             if (categorias != null)
             {
                 DataRow row = categorias.NewRow();
@@ -81,7 +81,7 @@ namespace pryGestionInventario2
 
         public void CargarProductos()
         {
-            DataTable productos = productosBD.ObtenerProductos();
+            DataTable productos = Productos.ObtenerProductos();
             if (productos != null)
             {
                 dgvProductos.DataSource = productos;

@@ -40,7 +40,8 @@ namespace pryGestionInventario2
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmMostrarProductos v = new frmMostrarProductos();
+            v.ShowDialog();
         }
     }
 }

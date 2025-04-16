@@ -17,7 +17,7 @@ namespace pryGestionInventario2
         Trusted_Connection=True: usa la autenticación de Windows (no usuario/contraseña).
         */
 
-        public string cadenaConexion = "Server=localhost;Database=Productos;Trusted_Connection=True;";
+        public string cadenaConexion = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
 
         private SqlConnection conexion;//representa la conexion a la base de datos
 
