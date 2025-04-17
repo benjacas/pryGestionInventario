@@ -18,9 +18,16 @@ namespace pryGestionInventario2
             InitializeComponent();
         }
         private clsProductos nuevoProducto = new clsProductos();
+        private clsProductos Producto = new clsProductos();
         
+
         private void frmAgregarProducto_Load(object sender, EventArgs e)
         {
+            clsProductos productos = new clsProductos();
+            cmbCategorias.DataSource = productos.ObtenerCategorias();
+            cmbCategorias.DisplayMember = "Nombre";
+            cmbCategorias.ValueMember = "Id";
+
             CargarCategorias();
             CargarProductos();
         }
@@ -29,20 +36,25 @@ namespace pryGestionInventario2
         {
             try
             {
-                string nombre=txtNombre.Text;
-                string desc = txtDescripcion.Text;
-                string stock = Convert.ToString(numStock.Value);
-                string precio = Convert.ToString(numPrecio.Value);
+                nuevoProducto.Nombre=txtNombre.Text;
+                nuevoProducto.Descripcion = txtDescripcion.Text;
+                nuevoProducto.Stock = Convert.ToInt32(numStock.Value);
+                nuevoProducto.Precio = numPrecio.Value;
+                nuevoProducto.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
 
-                //PORTERMINARRRRDataTable Resultados = nuevoProducto.AgregarProducto()
+                Producto.AgregarProducto(nuevoProducto);
+                MessageBox.Show("Producto agregado correctamente.");
 
-                /*Productos.AgregarProducto(nuevoProducto);
+                CargarCategorias();
+                CargarProductos();
+
+                
                 CargarProductos();
                 txtNombre.Clear();
                 txtDescripcion.Clear();
                 numPrecio.Value = 0;
                 numStock.Value = 0;
-                cmbCategorias.SelectedIndex = -1;*/
+                cmbCategorias.SelectedIndex = -1;
             }
             catch (Exception ex)
             {

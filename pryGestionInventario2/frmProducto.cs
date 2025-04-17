@@ -43,5 +43,11 @@ namespace pryGestionInventario2
             frmMostrarProductos v = new frmMostrarProductos();
             v.ShowDialog();
         }
+
+        private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEliminarProducto v = new frmEliminarProducto();
+            v.ShowDialog();
+        }
     }
 }

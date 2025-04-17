@@ -42,9 +42,10 @@ namespace pryGestionInventario2
             else
             {
                 btnEliminar.Enabled = true;
-                DataGridViewRow filaSeleccionada = dgvProductos.SelectedRows[0];
-
-                string nombreProducto = filaSeleccionada.Cells["Nombre"].Value.ToString();
+                DataGridViewRow seleccion = dgvProductos.SelectedRows[0];
+                string nombreProducto = seleccion.Cells["Nombre"].Value.ToString();
+                Productos.EliminarProductoPorNombre(nombreProducto);
+                CargarProductos();
             }
         }
     }

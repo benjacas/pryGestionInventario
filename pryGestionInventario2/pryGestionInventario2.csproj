@@ -60,6 +60,12 @@
     <Compile Include="frmEliminarProducto.Designer.cs">
       <DependentUpon>frmEliminarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarProducto.Designer.cs">
+      <DependentUpon>frmModificarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMostrarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminarProducto.resx">
       <DependentUpon>frmEliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarProducto.resx">
+      <DependentUpon>frmModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMostrarProductos.resx">
       <DependentUpon>frmMostrarProductos.cs</DependentUpon>

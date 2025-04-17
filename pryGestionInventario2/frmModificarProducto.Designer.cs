@@ -1,6 +1,6 @@
 ﻿namespace pryGestionInventario2
 {
-    partial class frmAgregarProducto
+    partial class frmModificarProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.numStock = new System.Windows.Forms.NumericUpDown();
@@ -43,16 +44,27 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(43, 12);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.Size = new System.Drawing.Size(719, 294);
+            this.dgvProductos.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.lblCodigo);
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.lblCategoria);
             this.groupBox1.Controls.Add(this.cmbCategorias);
             this.groupBox1.Controls.Add(this.numStock);
@@ -69,24 +81,24 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 312);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 126);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Agregar";
+            this.groupBox1.Text = "Modificar";
             // 
-            // btnAgregar
+            // btnModificar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(169, 97);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(417, 23);
-            this.btnAgregar.TabIndex = 27;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnModificar.Location = new System.Drawing.Point(169, 97);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(417, 23);
+            this.btnModificar.TabIndex = 27;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(626, 32);
+            this.lblCategoria.Location = new System.Drawing.Point(635, 31);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(52, 13);
             this.lblCategoria.TabIndex = 6;
@@ -95,21 +107,21 @@
             // cmbCategorias
             // 
             this.cmbCategorias.FormattingEnabled = true;
-            this.cmbCategorias.Location = new System.Drawing.Point(629, 59);
+            this.cmbCategorias.Location = new System.Drawing.Point(638, 58);
             this.cmbCategorias.Name = "cmbCategorias";
             this.cmbCategorias.Size = new System.Drawing.Size(121, 21);
             this.cmbCategorias.TabIndex = 26;
             // 
             // numStock
             // 
-            this.numStock.Location = new System.Drawing.Point(466, 61);
+            this.numStock.Location = new System.Drawing.Point(503, 59);
             this.numStock.Name = "numStock";
             this.numStock.Size = new System.Drawing.Size(120, 20);
             this.numStock.TabIndex = 25;
             // 
             // numPrecio
             // 
-            this.numPrecio.Location = new System.Drawing.Point(307, 61);
+            this.numPrecio.Location = new System.Drawing.Point(368, 59);
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(120, 20);
             this.numPrecio.TabIndex = 24;
@@ -117,7 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(463, 32);
+            this.label4.Location = new System.Drawing.Point(500, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
@@ -125,7 +137,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(169, 60);
+            this.txtDescripcion.Location = new System.Drawing.Point(252, 60);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 4;
@@ -133,16 +145,16 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(166, 32);
+            this.lblDescripcion.Location = new System.Drawing.Point(249, 32);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(69, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 9;
-            this.lblDescripcion.Text = "Descaripción";
+            this.lblDescripcion.Text = "Descripción";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(304, 32);
+            this.label3.Location = new System.Drawing.Point(365, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 7;
@@ -184,7 +196,7 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(27, 32);
+            this.lbl.Location = new System.Drawing.Point(133, 32);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(44, 13);
             this.lbl.TabIndex = 5;
@@ -192,55 +204,66 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(31, 60);
+            this.txtNombre.Location = new System.Drawing.Point(137, 60);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
             // 
-            // dgvProductos
+            // lblCodigo
             // 
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(43, 12);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(719, 294);
-            this.dgvProductos.TabIndex = 1;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Enabled = false;
+            this.lblCodigo.Location = new System.Drawing.Point(17, 33);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.TabIndex = 29;
+            this.lblCodigo.Text = "Codigo";
             // 
-            // frmAgregarProducto
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(20, 59);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 28;
+            // 
+            // frmModificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmAgregarProducto";
-            this.Text = "frmAgregarProducto";
-            this.Load += new System.EventHandler(this.frmAgregarProducto_Load);
+            this.Controls.Add(this.dgvProductos);
+            this.Name = "frmModificarProducto";
+            this.Text = "frmModificarProducto";
+            this.Load += new System.EventHandler(this.frmModificarProducto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.ComboBox cmbCategorias;
+        private System.Windows.Forms.NumericUpDown numStock;
+        private System.Windows.Forms.NumericUpDown numPrecio;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbCategorias;
-        private System.Windows.Forms.NumericUpDown numStock;
-        private System.Windows.Forms.NumericUpDown numPrecio;
-        private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }
