@@ -82,6 +82,7 @@
             this.modificarProductoToolStripMenuItem.Name = "modificarProductoToolStripMenuItem";
             this.modificarProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarProductoToolStripMenuItem.Text = "Modificar Producto";
+            this.modificarProductoToolStripMenuItem.Click += new System.EventHandler(this.modificarProductoToolStripMenuItem_Click);
             // 
             // eliminarProductoToolStripMenuItem
             // 
@@ -95,6 +96,7 @@
             this.crearReporteToolStripMenuItem.Name = "crearReporteToolStripMenuItem";
             this.crearReporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.crearReporteToolStripMenuItem.Text = "Crear Reporte";
+            this.crearReporteToolStripMenuItem.Click += new System.EventHandler(this.crearReporteToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 

@@ -38,14 +38,15 @@
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(107, 12);
+            this.dgvProductos.Enabled = false;
+            this.dgvProductos.Location = new System.Drawing.Point(55, 12);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(592, 290);
+            this.dgvProductos.Size = new System.Drawing.Size(682, 290);
             this.dgvProductos.TabIndex = 0;
             // 
             // txtBuscarNombre
             // 
-            this.txtBuscarNombre.Location = new System.Drawing.Point(104, 339);
+            this.txtBuscarNombre.Location = new System.Drawing.Point(55, 339);
             this.txtBuscarNombre.Name = "txtBuscarNombre";
             this.txtBuscarNombre.Size = new System.Drawing.Size(109, 20);
             this.txtBuscarNombre.TabIndex = 1;
@@ -53,7 +54,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(104, 323);
+            this.lblNombre.Location = new System.Drawing.Point(55, 323);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 2;
@@ -61,9 +62,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(104, 380);
+            this.btnBuscar.Location = new System.Drawing.Point(55, 380);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(592, 45);
+            this.btnBuscar.Size = new System.Drawing.Size(682, 45);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;

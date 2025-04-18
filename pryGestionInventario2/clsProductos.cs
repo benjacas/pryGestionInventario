@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
 
 namespace pryGestionInventario2
 {
@@ -132,6 +135,69 @@ namespace pryGestionInventario2
             string query = "SELECT Id, Nombre FROM Categorias";//consulta el ID y el nombre de la tabla categorias
             SqlCommand comando = new SqlCommand(query);//pide
             return Conexion.EjecutarConsulta(comando); //devuelve
+        }
+
+
+        public void GenerarReporte(string rutaArchivo)
+        {
+            DataTable productos = ObtenerProductos();
+
+            Document doc = new Document(PageSize.A4, 40, 40, 80, 40); // crea un documento con sus caracteristicas
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(rutaArchivo, FileMode.Create));
+            doc.Open();
+
+            // 1. Logo (opcional, debe estar en una ruta válida)
+            // Image logo = Image.GetInstance("ruta/del/logo.png");
+            // logo.ScaleToFit(100f, 100f);
+            // logo.Alignment = Image.ALIGN_LEFT;
+            // doc.Add(logo);
+
+            // Título
+            Paragraph titulo = new Paragraph("REPORTE DE PRODUCTOS", new Font(Font.FontFamily.HELVETICA, 18f, Font.BOLD));//se crea un objeto llamado titulo y se le asigna caracteristicas a la letra del parrafo
+            titulo.Alignment = Element.ALIGN_CENTER;//alinea en el centro de la pagina
+            titulo.SpacingAfter = 10f;//espaciado
+            doc.Add(titulo);//añade el titulo al documento
+
+            //Fecha
+            Paragraph fecha = new Paragraph("Fecha de generación: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"),//otro parrafo llamado fecha
+                                new Font(Font.FontFamily.HELVETICA, 10f, Font.ITALIC));
+            fecha.Alignment = Element.ALIGN_RIGHT;
+            fecha.SpacingAfter = 20f;
+            doc.Add(fecha);
+
+            // Tabla
+            PdfPTable tabla = new PdfPTable(productos.Columns.Count);//
+            tabla.WidthPercentage = 100;
+
+            // Colores y fuentes
+            BaseColor colorEncabezado = new BaseColor(52, 152, 219); // Azul
+            Font fontEncabezado = new Font(Font.FontFamily.HELVETICA, 12f, Font.BOLD, BaseColor.WHITE);
+            Font fontCelda = new Font(Font.FontFamily.HELVETICA, 10f);
+
+            // 5. Encabezados con fondo azul
+            foreach (DataColumn col in productos.Columns)
+            {
+                PdfPCell celdaEncabezado = new PdfPCell(new Phrase(col.ColumnName, fontEncabezado));
+                celdaEncabezado.BackgroundColor = colorEncabezado;
+                celdaEncabezado.HorizontalAlignment = Element.ALIGN_CENTER;
+                celdaEncabezado.Padding = 5;
+                tabla.AddCell(celdaEncabezado);
+            }
+
+            // 6. Celdas con datos
+            foreach (DataRow fila in productos.Rows)
+            {
+                foreach (var item in fila.ItemArray)
+                {
+                    PdfPCell celda = new PdfPCell(new Phrase(item.ToString(), fontCelda));
+                    celda.Padding = 4;
+                    tabla.AddCell(celda);
+                }
+            }
+
+            doc.Add(tabla);
+            doc.Close();
+
         }
 
     }

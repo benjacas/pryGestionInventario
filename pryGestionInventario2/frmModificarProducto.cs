@@ -19,6 +19,9 @@ namespace pryGestionInventario2
         clsProductos ProductoEditar=new clsProductos();
         private void frmModificarProducto_Load(object sender, EventArgs e)
         {
+            CargarCategorias();
+            CargarProductos();
+
             // Llenar combo de categorías
             clsProductos p = new clsProductos();
             cmbCategorias.DataSource = p.ObtenerCategorias();
@@ -51,11 +54,39 @@ namespace pryGestionInventario2
 
                 productoActualizado.ModificarProducto(productoActualizado);
 
-                this.Close(); // Opcional: cerrar luego de guardar
+                CargarProductos();
+                CargarCategorias();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al guardar cambios: " + ex.Message);
+            }
+        }
+
+
+        public void CargarCategorias()
+        {
+            DataTable categorias = ProductoEditar.ObtenerCategorias();
+            if (categorias != null)
+            {
+                DataRow row = categorias.NewRow();
+                row["Nombre"] = "Seleccionar categoría";
+                categorias.Rows.InsertAt(row, 0);
+
+                cmbCategorias.DisplayMember = "Nombre";
+                cmbCategorias.ValueMember = "Id";
+                cmbCategorias.DataSource = categorias;
+
+                cmbCategorias.SelectedIndex = -1;
+            }
+        }
+
+        public void CargarProductos()
+        {
+            DataTable productos = ProductoEditar.ObtenerProductos();
+            if (productos != null)
+            {
+                dgvProductos.DataSource = productos;
             }
         }
     }
