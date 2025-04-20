@@ -74,6 +74,7 @@
             this.btnCargar.TabIndex = 3;
             this.btnCargar.Text = "Agregar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // lblApellido
             // 
@@ -141,6 +142,7 @@
             this.Name = "frmAgregarContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contactos";
+            this.Load += new System.EventHandler(this.frmAgregarContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
