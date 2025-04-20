@@ -61,5 +61,11 @@ namespace pryGestionInventario2
             frmGenerarReporte v = new frmGenerarReporte();
             v.ShowDialog();
         }
+
+        private void mostrarContactosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarContactos v = new frmAgregarContactos();
+            v.ShowDialog();
+        }
     }
 }
