@@ -57,11 +57,6 @@ namespace pryGestionInventario2
                 CargarProductos();
                 CargarCategorias();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al guardar cambios: " + ex.Message);
-            }
-        }
 
 
         public void CargarCategorias()
