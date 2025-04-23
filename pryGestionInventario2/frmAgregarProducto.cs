@@ -19,7 +19,7 @@ namespace pryGestionInventario2
         }
         private clsProductos nuevoProducto = new clsProductos();
         private clsProductos Producto = new clsProductos();
-        
+
 
         private void frmAgregarProducto_Load(object sender, EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace pryGestionInventario2
         {
             try
             {
-                nuevoProducto.Nombre=txtNombre.Text;
+                nuevoProducto.Nombre = txtNombre.Text;
                 nuevoProducto.Descripcion = txtDescripcion.Text;
                 nuevoProducto.Stock = Convert.ToInt32(numStock.Value);
                 nuevoProducto.Precio = numPrecio.Value;
@@ -48,7 +48,7 @@ namespace pryGestionInventario2
                 CargarCategorias();
                 CargarProductos();
 
-                
+                ControlDeCargaDatos();
                 CargarProductos();
                 txtNombre.Clear();
                 txtDescripcion.Clear();
@@ -98,7 +98,118 @@ namespace pryGestionInventario2
             }
         }
 
+        public void ControlDeCargaDatos()
+        {
 
+            if (txtNombre.Text == "")
+            {
+                txtNombre.Focus();
+                txtNombre.BackColor = Color.Red;
+            }
+            else
+            {
+                if (txtDescripcion.Text == "")
+                {
+                    txtDescripcion.Focus();
+                    txtDescripcion.BackColor = Color.Red;
+                }
+                else
+                {
+                    if (numPrecio.Value == 0)
+                    {
+                        numPrecio.Focus();
+                        numPrecio.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (numStock.Value == 0)
+                        {
+                            numStock.Focus();
+                            numStock.BackColor = Color.Red;
+                        }
+                        else
+                        {
+                            if (cmbCategorias.SelectedIndex == -1)
+                            {
+                                cmbCategorias.Focus();
+                                cmbCategorias.BackColor = Color.Red;
+                            }
+                            else
+                            {
+                                //CargarEnBD
+                                //limpiarControles();
+                            }
+                        }
+                    }
+                }
+            }
 
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                txtNombre.BackColor = Color.Green;
+                txtDescripcion.Enabled = true;
+            }
+            else
+            {
+                txtNombre.BackColor = Color.Red;
+                txtDescripcion.Enabled = false;
+            }
+        }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbCategorias.SelectedIndex > -1)
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void numStock_ValueChanged(object sender, EventArgs e)
+        {
+            if (numStock.Value > 0)
+            {
+                cmbCategorias.Enabled = true;
+            }
+            else
+            {
+                numStock.BackColor = Color.Red;
+                cmbCategorias.Enabled = false;
+            }
+        }
+
+        private void numPrecio_ValueChanged(object sender, EventArgs e)
+        {
+            if (numPrecio.Value > 0)
+            {
+                numStock.Enabled = true;
+            }
+            else
+            {
+                numPrecio.BackColor = Color.Red;
+                numStock.Enabled = false;
+            }
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDescripcion.Text != "")
+            {
+                txtDescripcion.BackColor = Color.Green;
+                numPrecio.Enabled = true;
+            }
+            else
+            {
+                txtDescripcion.BackColor = Color.Red;
+                numPrecio.Enabled = false;
+            }
+        }
     }
 }
