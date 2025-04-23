@@ -19,6 +19,17 @@ namespace pryGestionInventario2
         clsContactos nuevoContacto = new clsContactos();
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            
+            
+        }
+
+        private void frmAgregarContactos_Load(object sender, EventArgs e)
+        {
+            nuevoContacto.CargarContactos(nuevoContacto, dgvContactos);
+        }
+
+        private void btnCargar_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 nuevoContacto.Nombre = txtNombre.Text;

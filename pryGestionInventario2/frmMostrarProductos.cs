@@ -34,9 +34,14 @@ namespace pryGestionInventario2
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre=txtBuscarNombre.Text;
-            DataTable Resultados= Productos.BuscarProductoPorTexto(nombre);
-            dgvProductos.DataSource= Resultados;
+           
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            string nombre = txtBuscarNombre.Text;
+            DataTable Resultados = Productos.BuscarProductoPorTexto(nombre);
+            dgvProductos.DataSource = Resultados;
         }
     }
 }

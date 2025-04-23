@@ -42,21 +42,8 @@ namespace pryGestionInventario2
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                clsProductos productoActualizado = new clsProductos();
-                productoActualizado.Codigo = int.Parse(txtCodigo.Text);
-                productoActualizado.Nombre = txtNombre.Text;
-                productoActualizado.Descripcion = txtDescripcion.Text;
-                productoActualizado.Precio = numPrecio.Value;
-                productoActualizado.Stock = Convert.ToInt32(numStock.Value);
-                productoActualizado.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
-
-                productoActualizado.ModificarProducto(productoActualizado);
-
-                CargarProductos();
-                CargarCategorias();
-            }
+            
+        }
 
 
         public void CargarCategorias()
@@ -82,6 +69,29 @@ namespace pryGestionInventario2
             if (productos != null)
             {
                 dgvProductos.DataSource = productos;
+            }
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                clsProductos productoActualizado = new clsProductos();
+                productoActualizado.Codigo = int.Parse(txtCodigo.Text);
+                productoActualizado.Nombre = txtNombre.Text;
+                productoActualizado.Descripcion = txtDescripcion.Text;
+                productoActualizado.Precio = numPrecio.Value;
+                productoActualizado.Stock = Convert.ToInt32(numStock.Value);
+                productoActualizado.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
+
+                productoActualizado.ModificarProducto(productoActualizado);
+
+                CargarProductos();
+                CargarCategorias();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar cambios: " + ex.Message);
             }
         }
     }

@@ -34,6 +34,10 @@ namespace pryGestionInventario2
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnGenerar_Click_1(object sender, EventArgs e)
+        {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivo PDF (*.pdf)|*.pdf";
             saveFileDialog.Title = "Guardar Reporte en PDF";

@@ -33,6 +33,11 @@ namespace pryGestionInventario2
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
             if (dgvProductos.SelectedRows.Count == 0)
             {
                 btnEliminar.Enabled = false;

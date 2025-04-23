@@ -34,32 +34,7 @@ namespace pryGestionInventario2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                nuevoProducto.Nombre = txtNombre.Text;
-                nuevoProducto.Descripcion = txtDescripcion.Text;
-                nuevoProducto.Stock = Convert.ToInt32(numStock.Value);
-                nuevoProducto.Precio = numPrecio.Value;
-                nuevoProducto.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
-
-                Producto.AgregarProducto(nuevoProducto);
-                MessageBox.Show("Producto agregado correctamente.");
-
-                CargarCategorias();
-                CargarProductos();
-
-                ControlDeCargaDatos();
-                CargarProductos();
-                txtNombre.Clear();
-                txtDescripcion.Clear();
-                numPrecio.Value = 0;
-                numStock.Value = 0;
-                cmbCategorias.SelectedIndex = -1;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}");
-            }
+           
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -209,6 +184,35 @@ namespace pryGestionInventario2
             {
                 txtDescripcion.BackColor = Color.Red;
                 numPrecio.Enabled = false;
+            }
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                nuevoProducto.Nombre = txtNombre.Text;
+                nuevoProducto.Descripcion = txtDescripcion.Text;
+                nuevoProducto.Stock = Convert.ToInt32(numStock.Value);
+                nuevoProducto.Precio = numPrecio.Value;
+                nuevoProducto.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
+
+                Producto.AgregarProducto(nuevoProducto);
+
+                CargarCategorias();
+                CargarProductos();
+
+                ControlDeCargaDatos();
+                CargarProductos();
+                txtNombre.Clear();
+                txtDescripcion.Clear();
+                numPrecio.Value = 0;
+                numStock.Value = 0;
+                cmbCategorias.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}");
             }
         }
     }
