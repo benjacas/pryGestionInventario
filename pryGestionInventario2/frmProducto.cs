@@ -67,5 +67,10 @@ namespace pryGestionInventario2
             frmAgregarContactos v = new frmAgregarContactos();
             v.ShowDialog();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
