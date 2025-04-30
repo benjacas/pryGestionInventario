@@ -143,6 +143,7 @@
     <Compile Include="clsConexionBD.cs" />
     <Compile Include="clsContactos.cs" />
     <Compile Include="clsProductos.cs" />
+    <Compile Include="clsUsuarios.cs" />
     <Compile Include="frmAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>

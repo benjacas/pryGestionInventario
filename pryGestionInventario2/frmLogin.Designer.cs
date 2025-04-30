@@ -33,24 +33,23 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
             this.btnRegistrarse = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelIngresar = new Guna.UI2.WinForms.Guna2Panel();
             this.panelRegistro = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtConfirmarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtConfirmarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRegistrarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRegistrarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelIngresar.SuspendLayout();
             this.panelRegistro.SuspendLayout();
@@ -89,31 +88,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Recordarme";
             // 
-            // guna2Button1
+            // btnIngresar
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(9, 188);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Ingresar";
-            // 
-            // label2
-            // 
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 251);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 22);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "¿Se olvidó el usuario o contraseña?";
+            this.btnIngresar.Animated = true;
+            this.btnIngresar.AutoRoundedCorners = true;
+            this.btnIngresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIngresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIngresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIngresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(9, 188);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(200, 45);
+            this.btnIngresar.TabIndex = 6;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnRegistrarse
             // 
@@ -128,55 +118,55 @@
             this.btnRegistrarse.ForeColor = System.Drawing.Color.DimGray;
             this.btnRegistrarse.Image = global::pryGestionInventario2.Properties.Resources.depositphotos_477186434_stock_illustration_arrow_button_right_icon;
             this.btnRegistrarse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnRegistrarse.Location = new System.Drawing.Point(9, 290);
+            this.btnRegistrarse.Location = new System.Drawing.Point(9, 259);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(199, 45);
             this.btnRegistrarse.TabIndex = 8;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
-            // guna2TextBox3
+            // txtUsuario
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.BorderRadius = 8;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
-            this.guna2TextBox3.Location = new System.Drawing.Point(9, 60);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "Nombre de Usuario";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox3.TabIndex = 3;
+            this.txtUsuario.Animated = true;
+            this.txtUsuario.BorderRadius = 8;
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuario.DefaultText = "";
+            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
+            this.txtUsuario.Location = new System.Drawing.Point(9, 60);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PlaceholderText = "Nombre de Usuario";
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.Size = new System.Drawing.Size(200, 36);
+            this.txtUsuario.TabIndex = 3;
             // 
-            // guna2TextBox2
+            // txtContraseña
             // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderRadius = 8;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
-            this.guna2TextBox2.Location = new System.Drawing.Point(9, 102);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "Contraseña";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox2.TabIndex = 2;
-            this.guna2TextBox2.UseSystemPasswordChar = true;
+            this.txtContraseña.Animated = true;
+            this.txtContraseña.BorderRadius = 8;
+            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContraseña.DefaultText = "";
+            this.txtContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
+            this.txtContraseña.Location = new System.Drawing.Point(9, 102);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PlaceholderText = "Contraseña";
+            this.txtContraseña.SelectedText = "";
+            this.txtContraseña.Size = new System.Drawing.Size(200, 36);
+            this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // guna2PictureBox1
             // 
@@ -210,12 +200,11 @@
             // 
             // panelIngresar
             // 
-            this.panelIngresar.Controls.Add(this.guna2Button1);
+            this.panelIngresar.Controls.Add(this.btnIngresar);
             this.panelIngresar.Controls.Add(this.label3);
-            this.panelIngresar.Controls.Add(this.guna2TextBox2);
+            this.panelIngresar.Controls.Add(this.txtContraseña);
             this.panelIngresar.Controls.Add(this.btnRegistrarse);
-            this.panelIngresar.Controls.Add(this.guna2TextBox3);
-            this.panelIngresar.Controls.Add(this.label2);
+            this.panelIngresar.Controls.Add(this.txtUsuario);
             this.panelIngresar.Controls.Add(this.guna2ToggleSwitch1);
             this.panelIngresar.Controls.Add(this.label1);
             this.panelIngresar.Location = new System.Drawing.Point(480, 52);
@@ -225,33 +214,77 @@
             // 
             // panelRegistro
             // 
-            this.panelRegistro.Controls.Add(this.guna2TextBox5);
-            this.panelRegistro.Controls.Add(this.guna2TextBox6);
-            this.panelRegistro.Controls.Add(this.guna2Button3);
+            this.panelRegistro.Controls.Add(this.txtConfirmarContraseña);
+            this.panelRegistro.Controls.Add(this.txtConfirmarUsuario);
+            this.panelRegistro.Controls.Add(this.btnRegistrar);
             this.panelRegistro.Controls.Add(this.label4);
-            this.panelRegistro.Controls.Add(this.guna2TextBox1);
+            this.panelRegistro.Controls.Add(this.txtRegistrarContraseña);
             this.panelRegistro.Controls.Add(this.guna2Button4);
-            this.panelRegistro.Controls.Add(this.guna2TextBox4);
+            this.panelRegistro.Controls.Add(this.txtRegistrarUsuario);
             this.panelRegistro.Location = new System.Drawing.Point(243, 52);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Size = new System.Drawing.Size(219, 349);
             this.panelRegistro.TabIndex = 11;
             // 
-            // guna2Button3
+            // txtConfirmarContraseña
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(8, 259);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button3.TabIndex = 6;
-            this.guna2Button3.Text = "Registrarse";
+            this.txtConfirmarContraseña.Animated = true;
+            this.txtConfirmarContraseña.BorderRadius = 8;
+            this.txtConfirmarContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmarContraseña.DefaultText = "";
+            this.txtConfirmarContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmarContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmarContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmarContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmarContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtConfirmarContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmarContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(9, 177);
+            this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
+            this.txtConfirmarContraseña.PlaceholderText = "Contraseña";
+            this.txtConfirmarContraseña.SelectedText = "";
+            this.txtConfirmarContraseña.Size = new System.Drawing.Size(200, 36);
+            this.txtConfirmarContraseña.TabIndex = 10;
+            this.txtConfirmarContraseña.UseSystemPasswordChar = true;
+            // 
+            // txtConfirmarUsuario
+            // 
+            this.txtConfirmarUsuario.Animated = true;
+            this.txtConfirmarUsuario.BorderRadius = 8;
+            this.txtConfirmarUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmarUsuario.DefaultText = "";
+            this.txtConfirmarUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmarUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmarUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmarUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmarUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtConfirmarUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmarUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
+            this.txtConfirmarUsuario.Location = new System.Drawing.Point(9, 135);
+            this.txtConfirmarUsuario.Name = "txtConfirmarUsuario";
+            this.txtConfirmarUsuario.PlaceholderText = "Nombre de Usuario";
+            this.txtConfirmarUsuario.SelectedText = "";
+            this.txtConfirmarUsuario.Size = new System.Drawing.Size(200, 36);
+            this.txtConfirmarUsuario.TabIndex = 11;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Animated = true;
+            this.btnRegistrar.AutoRoundedCorners = true;
+            this.btnRegistrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(8, 259);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(200, 45);
+            this.btnRegistrar.TabIndex = 6;
+            this.btnRegistrar.Text = "Registrarse";
+            this.btnRegistrar.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // label4
             // 
@@ -259,31 +292,31 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 31);
+            this.label4.Size = new System.Drawing.Size(199, 31);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Ingresar Usuario";
+            this.label4.Text = "Registrar Usuario";
             // 
-            // guna2TextBox1
+            // txtRegistrarContraseña
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderRadius = 8;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
-            this.guna2TextBox1.Location = new System.Drawing.Point(9, 102);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "Contraseña";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox1.TabIndex = 2;
-            this.guna2TextBox1.UseSystemPasswordChar = true;
+            this.txtRegistrarContraseña.Animated = true;
+            this.txtRegistrarContraseña.BorderRadius = 8;
+            this.txtRegistrarContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRegistrarContraseña.DefaultText = "";
+            this.txtRegistrarContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRegistrarContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRegistrarContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistrarContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistrarContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistrarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRegistrarContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistrarContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
+            this.txtRegistrarContraseña.Location = new System.Drawing.Point(9, 102);
+            this.txtRegistrarContraseña.Name = "txtRegistrarContraseña";
+            this.txtRegistrarContraseña.PlaceholderText = "Contraseña";
+            this.txtRegistrarContraseña.SelectedText = "";
+            this.txtRegistrarContraseña.Size = new System.Drawing.Size(200, 36);
+            this.txtRegistrarContraseña.TabIndex = 2;
+            this.txtRegistrarContraseña.UseSystemPasswordChar = true;
             // 
             // guna2Button4
             // 
@@ -303,69 +336,26 @@
             this.guna2Button4.TabIndex = 8;
             this.guna2Button4.Text = "Login";
             // 
-            // guna2TextBox4
+            // txtRegistrarUsuario
             // 
-            this.guna2TextBox4.Animated = true;
-            this.guna2TextBox4.BorderRadius = 8;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
-            this.guna2TextBox4.Location = new System.Drawing.Point(9, 60);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PlaceholderText = "Nombre de Usuario";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox4.TabIndex = 3;
-            // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.Animated = true;
-            this.guna2TextBox5.BorderRadius = 8;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
-            this.guna2TextBox5.Location = new System.Drawing.Point(9, 177);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PlaceholderText = "Contraseña";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox5.TabIndex = 10;
-            this.guna2TextBox5.UseSystemPasswordChar = true;
-            // 
-            // guna2TextBox6
-            // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.BorderRadius = 8;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
-            this.guna2TextBox6.Location = new System.Drawing.Point(9, 135);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PlaceholderText = "Nombre de Usuario";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox6.TabIndex = 11;
+            this.txtRegistrarUsuario.Animated = true;
+            this.txtRegistrarUsuario.BorderRadius = 8;
+            this.txtRegistrarUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRegistrarUsuario.DefaultText = "";
+            this.txtRegistrarUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRegistrarUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRegistrarUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistrarUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistrarUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistrarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRegistrarUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistrarUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
+            this.txtRegistrarUsuario.Location = new System.Drawing.Point(9, 60);
+            this.txtRegistrarUsuario.Name = "txtRegistrarUsuario";
+            this.txtRegistrarUsuario.PlaceholderText = "Nombre de Usuario";
+            this.txtRegistrarUsuario.SelectedText = "";
+            this.txtRegistrarUsuario.Size = new System.Drawing.Size(200, 36);
+            this.txtRegistrarUsuario.TabIndex = 3;
             // 
             // frmLogin
             // 
@@ -395,24 +385,23 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsuario;
+        private Guna.UI2.WinForms.Guna2TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button btnIngresar;
         private Guna.UI2.WinForms.Guna2Button btnRegistrarse;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Panel panelIngresar;
         private Guna.UI2.WinForms.Guna2Panel panelRegistro;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnRegistrar;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtRegistrarContraseña;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtRegistrarUsuario;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmarContraseña;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmarUsuario;
     }
 }
