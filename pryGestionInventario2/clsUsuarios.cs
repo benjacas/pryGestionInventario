@@ -29,7 +29,7 @@ namespace pryGestionInventario2
         {
             try
             {
-                string query = "INSTERT INTO Usuarios(Usuarios,Contraseña) VALUES (@Usuario, @Contraseña)";
+                string query = "INSERT INTO Usuario(Usuario,Clave) VALUES (@usuario, @contraseña)";
                 SqlCommand comando = new SqlCommand(query);
                 conexion.EjecutarComando(comando);
 

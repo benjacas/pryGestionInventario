@@ -20,8 +20,18 @@ namespace pryGestionInventario2
         clsUsuarios Usuarios = new clsUsuarios();
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            panelRegistro.Visible = false;
+            panelRegistro.Visible = true;
+            panelIngresar.Visible = false;
            // Guna2Transition.HideSync(panelRegistro);
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            //panelRegistro.Visible = false;
+            //Guna2Transition1.HideSync(panelRegistro);
+            panelRegistro.Visible = false;
+            panelIngresar.Visible = true;
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -70,9 +80,18 @@ namespace pryGestionInventario2
                 //en todo caso cerrar o esconder el panel cuando termines el diseño. si no hacerlo en otro form al registro
                 //this.Close();
             }
+            else
+            {
+                MessageBox.Show("Los campos no coinciden.");
+            }
             
 
             
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            panelRegistro.Visible = false;
         }
     }
 }

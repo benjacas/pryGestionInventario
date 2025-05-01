@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
             this.btnRegistrarse = new Guna.UI2.WinForms.Guna2Button();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,7 +46,7 @@
             this.btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRegistrarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRegistroALogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtRegistrarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelIngresar.SuspendLayout();
@@ -62,31 +60,6 @@
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // guna2ToggleSwitch1
-            // 
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(9, 144);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
-            this.guna2ToggleSwitch1.TabIndex = 4;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Recordarme";
             // 
             // btnIngresar
             // 
@@ -139,7 +112,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
-            this.txtUsuario.Location = new System.Drawing.Point(9, 60);
+            this.txtUsuario.Location = new System.Drawing.Point(9, 69);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderText = "Nombre de Usuario";
             this.txtUsuario.SelectedText = "";
@@ -160,7 +133,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
-            this.txtContraseña.Location = new System.Drawing.Point(9, 102);
+            this.txtContraseña.Location = new System.Drawing.Point(9, 120);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PlaceholderText = "Contraseña";
             this.txtContraseña.SelectedText = "";
@@ -205,8 +178,6 @@
             this.panelIngresar.Controls.Add(this.txtContraseña);
             this.panelIngresar.Controls.Add(this.btnRegistrarse);
             this.panelIngresar.Controls.Add(this.txtUsuario);
-            this.panelIngresar.Controls.Add(this.guna2ToggleSwitch1);
-            this.panelIngresar.Controls.Add(this.label1);
             this.panelIngresar.Location = new System.Drawing.Point(480, 52);
             this.panelIngresar.Name = "panelIngresar";
             this.panelIngresar.Size = new System.Drawing.Size(219, 349);
@@ -219,9 +190,9 @@
             this.panelRegistro.Controls.Add(this.btnRegistrar);
             this.panelRegistro.Controls.Add(this.label4);
             this.panelRegistro.Controls.Add(this.txtRegistrarContraseña);
-            this.panelRegistro.Controls.Add(this.guna2Button4);
+            this.panelRegistro.Controls.Add(this.btnRegistroALogin);
             this.panelRegistro.Controls.Add(this.txtRegistrarUsuario);
-            this.panelRegistro.Location = new System.Drawing.Point(243, 52);
+            this.panelRegistro.Location = new System.Drawing.Point(480, 52);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Size = new System.Drawing.Size(219, 349);
             this.panelRegistro.TabIndex = 11;
@@ -240,7 +211,7 @@
             this.txtConfirmarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirmarContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmarContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
-            this.txtConfirmarContraseña.Location = new System.Drawing.Point(9, 177);
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(9, 188);
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.PlaceholderText = "Contraseña";
             this.txtConfirmarContraseña.SelectedText = "";
@@ -262,7 +233,7 @@
             this.txtConfirmarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirmarUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmarUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
-            this.txtConfirmarUsuario.Location = new System.Drawing.Point(9, 135);
+            this.txtConfirmarUsuario.Location = new System.Drawing.Point(9, 144);
             this.txtConfirmarUsuario.Name = "txtConfirmarUsuario";
             this.txtConfirmarUsuario.PlaceholderText = "Nombre de Usuario";
             this.txtConfirmarUsuario.SelectedText = "";
@@ -318,23 +289,24 @@
             this.txtRegistrarContraseña.TabIndex = 2;
             this.txtRegistrarContraseña.UseSystemPasswordChar = true;
             // 
-            // guna2Button4
+            // btnRegistroALogin
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button4.Location = new System.Drawing.Point(142, 310);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(66, 25);
-            this.guna2Button4.TabIndex = 8;
-            this.guna2Button4.Text = "Login";
+            this.btnRegistroALogin.Animated = true;
+            this.btnRegistroALogin.AutoRoundedCorners = true;
+            this.btnRegistroALogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistroALogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistroALogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistroALogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistroALogin.FillColor = System.Drawing.Color.Transparent;
+            this.btnRegistroALogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRegistroALogin.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistroALogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnRegistroALogin.Location = new System.Drawing.Point(142, 310);
+            this.btnRegistroALogin.Name = "btnRegistroALogin";
+            this.btnRegistroALogin.Size = new System.Drawing.Size(66, 25);
+            this.btnRegistroALogin.TabIndex = 8;
+            this.btnRegistroALogin.Text = "Login";
+            this.btnRegistroALogin.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // txtRegistrarUsuario
             // 
@@ -362,15 +334,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 442);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.panelIngresar);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelIngresar.ResumeLayout(false);
             this.panelIngresar.PerformLayout();
@@ -387,8 +360,6 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2TextBox txtUsuario;
         private Guna.UI2.WinForms.Guna2TextBox txtContraseña;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
         private Guna.UI2.WinForms.Guna2Button btnIngresar;
         private Guna.UI2.WinForms.Guna2Button btnRegistrarse;
         private System.Windows.Forms.Label label3;
@@ -399,7 +370,7 @@
         private Guna.UI2.WinForms.Guna2Button btnRegistrar;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtRegistrarContraseña;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnRegistroALogin;
         private Guna.UI2.WinForms.Guna2TextBox txtRegistrarUsuario;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmarContraseña;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmarUsuario;
