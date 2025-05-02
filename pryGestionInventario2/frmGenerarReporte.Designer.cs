@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnGenerar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnVolver = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,10 +61,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvProductos.Location = new System.Drawing.Point(52, 28);
+            this.dgvProductos.Location = new System.Drawing.Point(87, 29);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
-            this.dgvProductos.Size = new System.Drawing.Size(690, 304);
+            this.dgvProductos.Size = new System.Drawing.Size(701, 304);
             this.dgvProductos.TabIndex = 8;
             this.dgvProductos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProductos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -95,18 +96,35 @@
             this.btnGenerar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGenerar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnGenerar.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar.Location = new System.Drawing.Point(52, 351);
+            this.btnGenerar.Location = new System.Drawing.Point(87, 352);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(690, 75);
+            this.btnGenerar.Size = new System.Drawing.Size(701, 75);
             this.btnGenerar.TabIndex = 9;
             this.btnGenerar.Text = "Generar Reporte";
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click_1);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVolver.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVolver.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVolver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVolver.FillColor = System.Drawing.Color.Transparent;
+            this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Image = global::pryGestionInventario2.Properties.Resources.felchavolver;
+            this.btnVolver.Location = new System.Drawing.Point(12, 12);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(49, 46);
+            this.btnVolver.TabIndex = 10;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmGenerarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(832, 450);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.dgvProductos);
             this.Name = "frmGenerarReporte";
@@ -122,5 +140,6 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvProductos;
         private Guna.UI2.WinForms.Guna2Button btnGenerar;
+        private Guna.UI2.WinForms.Guna2Button btnVolver;
     }
 }

@@ -48,6 +48,7 @@
             this.txtRegistrarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnRegistroALogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtRegistrarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCerrar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelIngresar.SuspendLayout();
             this.panelRegistro.SuspendLayout();
@@ -213,7 +214,7 @@
             this.txtConfirmarContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
             this.txtConfirmarContraseña.Location = new System.Drawing.Point(9, 188);
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
-            this.txtConfirmarContraseña.PlaceholderText = "Contraseña";
+            this.txtConfirmarContraseña.PlaceholderText = "Confirmar Contraseña";
             this.txtConfirmarContraseña.SelectedText = "";
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(200, 36);
             this.txtConfirmarContraseña.TabIndex = 10;
@@ -235,7 +236,7 @@
             this.txtConfirmarUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
             this.txtConfirmarUsuario.Location = new System.Drawing.Point(9, 144);
             this.txtConfirmarUsuario.Name = "txtConfirmarUsuario";
-            this.txtConfirmarUsuario.PlaceholderText = "Nombre de Usuario";
+            this.txtConfirmarUsuario.PlaceholderText = "Confirmar Usuario";
             this.txtConfirmarUsuario.SelectedText = "";
             this.txtConfirmarUsuario.Size = new System.Drawing.Size(200, 36);
             this.txtConfirmarUsuario.TabIndex = 11;
@@ -329,14 +330,32 @@
             this.txtRegistrarUsuario.Size = new System.Drawing.Size(200, 36);
             this.txtRegistrarUsuario.TabIndex = 3;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BorderRadius = 10;
+            this.btnCerrar.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.btnCerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(705, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(33, 27);
+            this.btnCerrar.TabIndex = 12;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 442);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.panelIngresar);
+            this.Controls.Add(this.panelRegistro);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -374,5 +393,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtRegistrarUsuario;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmarContraseña;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmarUsuario;
+        private Guna.UI2.WinForms.Guna2Button btnCerrar;
     }
 }

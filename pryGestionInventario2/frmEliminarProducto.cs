@@ -53,5 +53,10 @@ namespace pryGestionInventario2
                 CargarProductos();
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

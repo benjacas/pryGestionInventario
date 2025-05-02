@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,56 +22,57 @@ namespace pryGestionInventario2
         {
 
         }
-
-        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnMostrar_Click(object sender, EventArgs e)
         {
-            
+            btnMostrar.Visible = false;
+            btnEsconder.Visible = true;
+            panelMenu.Visible = false;
+            panelMenu.Width = 51;
+            guna2Transition1.ShowSync(panelMenu);
         }
 
-        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnEsconder_Click(object sender, EventArgs e)
         {
-            
+            panelMenu.Visible = false;
+            btnEsconder.Visible = false;
+            btnMostrar.Visible = true;
+            panelMenu.Width = 225;
+            guna2Transition1.ShowSync(panelMenu);
         }
 
-        private void agregarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            frmAgregarProducto v = new frmAgregarProducto();
-            v.ShowDialog();
+            Environment.Exit(0);
         }
 
-        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnVerProducto_Click(object sender, EventArgs e)
         {
             frmMostrarProductos v = new frmMostrarProductos();
             v.ShowDialog();
         }
 
-        private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            frmEliminarProducto v = new frmEliminarProducto();
+            frmAgregarProducto v = new frmAgregarProducto();
             v.ShowDialog();
         }
 
-        private void modificarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnModificarProductos_Click(object sender, EventArgs e)
         {
             frmModificarProducto v = new frmModificarProducto();
             v.ShowDialog();
         }
 
-        private void crearReporteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnReporte_Click(object sender, EventArgs e)
         {
             frmGenerarReporte v = new frmGenerarReporte();
             v.ShowDialog();
         }
 
-        private void mostrarContactosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnBorrarProductos_Click(object sender, EventArgs e)
         {
-            frmAgregarContactos v = new frmAgregarContactos();
+            frmEliminarProducto v = new frmEliminarProducto();
             v.ShowDialog();
-        }
-
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

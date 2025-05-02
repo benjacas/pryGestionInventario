@@ -43,5 +43,10 @@ namespace pryGestionInventario2
             DataTable Resultados = Productos.BuscarProductoPorTexto(nombre);
             dgvProductos.DataSource = Resultados;
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

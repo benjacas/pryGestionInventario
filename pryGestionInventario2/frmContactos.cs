@@ -50,5 +50,10 @@ namespace pryGestionInventario2
                 MessageBox.Show($"Ocurrió un error: {error.Message}");
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

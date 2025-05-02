@@ -29,8 +29,10 @@ namespace pryGestionInventario2
         {
             try
             {
-                string query = "INSERT INTO Usuario(Usuario,Clave) VALUES (@usuario, @contraseña)";
+                string query = "INSERT INTO Usuarios(Usuario,Clave) VALUES (@usuario, @contraseña)";
                 SqlCommand comando = new SqlCommand(query);
+                comando.Parameters.AddWithValue("@usuario", usuario);
+                comando.Parameters.AddWithValue("@contraseña", contraseña);
                 conexion.EjecutarComando(comando);
 
                 MessageBox.Show("El usuario se ha registrado correctamente");

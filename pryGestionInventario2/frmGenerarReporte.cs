@@ -50,5 +50,10 @@ namespace pryGestionInventario2
                 MessageBox.Show("Reporte generado correctamente.");
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
