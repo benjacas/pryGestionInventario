@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnMostrar = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnEsconder = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnReporte = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBorrarProductos = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnModificarProductos = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAgregarProducto = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnVerProducto = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnMostrar = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnEsconder = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.btnCerrar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnContactos = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.btnContactos);
             this.panelMenu.Controls.Add(this.btnReporte);
             this.panelMenu.Controls.Add(this.btnBorrarProductos);
             this.panelMenu.Controls.Add(this.btnModificarProductos);
@@ -59,6 +61,111 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(225, 450);
             this.panelMenu.TabIndex = 24;
+            // 
+            // btnReporte
+            // 
+            this.guna2Transition1.SetDecoration(this.btnReporte, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnReporte.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReporte.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReporte.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReporte.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnReporte.FillColor2 = System.Drawing.Color.SkyBlue;
+            this.btnReporte.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Image = global::pryGestionInventario2.Properties.Resources.reporte;
+            this.btnReporte.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporte.Location = new System.Drawing.Point(12, 258);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(191, 45);
+            this.btnReporte.TabIndex = 29;
+            this.btnReporte.Text = "Generar Reporte";
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnBorrarProductos
+            // 
+            this.guna2Transition1.SetDecoration(this.btnBorrarProductos, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnBorrarProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrarProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrarProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBorrarProductos.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBorrarProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBorrarProductos.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnBorrarProductos.FillColor2 = System.Drawing.Color.SkyBlue;
+            this.btnBorrarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarProductos.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarProductos.Image = global::pryGestionInventario2.Properties.Resources.tacho;
+            this.btnBorrarProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBorrarProductos.Location = new System.Drawing.Point(12, 197);
+            this.btnBorrarProductos.Name = "btnBorrarProductos";
+            this.btnBorrarProductos.Size = new System.Drawing.Size(191, 45);
+            this.btnBorrarProductos.TabIndex = 28;
+            this.btnBorrarProductos.Text = "Borrar Productos";
+            this.btnBorrarProductos.Click += new System.EventHandler(this.btnBorrarProductos_Click);
+            // 
+            // btnModificarProductos
+            // 
+            this.guna2Transition1.SetDecoration(this.btnModificarProductos, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnModificarProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarProductos.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificarProductos.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnModificarProductos.FillColor2 = System.Drawing.Color.SkyBlue;
+            this.btnModificarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarProductos.ForeColor = System.Drawing.Color.White;
+            this.btnModificarProductos.Image = global::pryGestionInventario2.Properties.Resources.lapiz;
+            this.btnModificarProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnModificarProductos.Location = new System.Drawing.Point(12, 135);
+            this.btnModificarProductos.Name = "btnModificarProductos";
+            this.btnModificarProductos.Size = new System.Drawing.Size(191, 45);
+            this.btnModificarProductos.TabIndex = 27;
+            this.btnModificarProductos.Text = "Editar Productos";
+            this.btnModificarProductos.Click += new System.EventHandler(this.btnModificarProductos_Click);
+            // 
+            // btnAgregarProducto
+            // 
+            this.guna2Transition1.SetDecoration(this.btnAgregarProducto, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnAgregarProducto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarProducto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarProducto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarProducto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarProducto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarProducto.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarProducto.FillColor2 = System.Drawing.Color.SkyBlue;
+            this.btnAgregarProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.Image = global::pryGestionInventario2.Properties.Resources.plus_sign_vector_icon;
+            this.btnAgregarProducto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(12, 73);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(191, 45);
+            this.btnAgregarProducto.TabIndex = 26;
+            this.btnAgregarProducto.Text = "Agregar Productos";
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            // 
+            // btnVerProducto
+            // 
+            this.guna2Transition1.SetDecoration(this.btnVerProducto, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnVerProducto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVerProducto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVerProducto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVerProducto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVerProducto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVerProducto.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnVerProducto.FillColor2 = System.Drawing.Color.SkyBlue;
+            this.btnVerProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerProducto.ForeColor = System.Drawing.Color.White;
+            this.btnVerProducto.Image = global::pryGestionInventario2.Properties.Resources.producto_ver;
+            this.btnVerProducto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnVerProducto.Location = new System.Drawing.Point(12, 12);
+            this.btnVerProducto.Name = "btnVerProducto";
+            this.btnVerProducto.Size = new System.Drawing.Size(191, 45);
+            this.btnVerProducto.TabIndex = 25;
+            this.btnVerProducto.Text = "Ver Productos";
+            this.btnVerProducto.Click += new System.EventHandler(this.btnVerProducto_Click);
             // 
             // btnMostrar
             // 
@@ -107,111 +214,6 @@
             this.btnEsconder.UseTransparentBackground = true;
             this.btnEsconder.Click += new System.EventHandler(this.btnEsconder_Click);
             // 
-            // btnReporte
-            // 
-            this.guna2Transition1.SetDecoration(this.btnReporte, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnReporte.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReporte.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReporte.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReporte.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnReporte.FillColor2 = System.Drawing.Color.SkyBlue;
-            this.btnReporte.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Image = global::pryGestionInventario2.Properties.Resources.reporte;
-            this.btnReporte.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReporte.Location = new System.Drawing.Point(12, 339);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(191, 45);
-            this.btnReporte.TabIndex = 29;
-            this.btnReporte.Text = "Generar Reporte";
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
-            // btnBorrarProductos
-            // 
-            this.guna2Transition1.SetDecoration(this.btnBorrarProductos, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnBorrarProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBorrarProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBorrarProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBorrarProductos.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBorrarProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBorrarProductos.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnBorrarProductos.FillColor2 = System.Drawing.Color.SkyBlue;
-            this.btnBorrarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarProductos.ForeColor = System.Drawing.Color.White;
-            this.btnBorrarProductos.Image = global::pryGestionInventario2.Properties.Resources.tacho;
-            this.btnBorrarProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBorrarProductos.Location = new System.Drawing.Point(12, 265);
-            this.btnBorrarProductos.Name = "btnBorrarProductos";
-            this.btnBorrarProductos.Size = new System.Drawing.Size(191, 45);
-            this.btnBorrarProductos.TabIndex = 28;
-            this.btnBorrarProductos.Text = "Borrar Productos";
-            this.btnBorrarProductos.Click += new System.EventHandler(this.btnBorrarProductos_Click);
-            // 
-            // btnModificarProductos
-            // 
-            this.guna2Transition1.SetDecoration(this.btnModificarProductos, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnModificarProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModificarProductos.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModificarProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModificarProductos.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnModificarProductos.FillColor2 = System.Drawing.Color.SkyBlue;
-            this.btnModificarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarProductos.ForeColor = System.Drawing.Color.White;
-            this.btnModificarProductos.Image = global::pryGestionInventario2.Properties.Resources.lapiz;
-            this.btnModificarProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnModificarProductos.Location = new System.Drawing.Point(12, 191);
-            this.btnModificarProductos.Name = "btnModificarProductos";
-            this.btnModificarProductos.Size = new System.Drawing.Size(191, 45);
-            this.btnModificarProductos.TabIndex = 27;
-            this.btnModificarProductos.Text = "Editar Productos";
-            this.btnModificarProductos.Click += new System.EventHandler(this.btnModificarProductos_Click);
-            // 
-            // btnAgregarProducto
-            // 
-            this.guna2Transition1.SetDecoration(this.btnAgregarProducto, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnAgregarProducto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarProducto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarProducto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarProducto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarProducto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarProducto.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAgregarProducto.FillColor2 = System.Drawing.Color.SkyBlue;
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.Image = global::pryGestionInventario2.Properties.Resources.plus_sign_vector_icon;
-            this.btnAgregarProducto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(12, 122);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(191, 45);
-            this.btnAgregarProducto.TabIndex = 26;
-            this.btnAgregarProducto.Text = "Agregar Productos";
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
-            // btnVerProducto
-            // 
-            this.guna2Transition1.SetDecoration(this.btnVerProducto, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnVerProducto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnVerProducto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnVerProducto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnVerProducto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnVerProducto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnVerProducto.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnVerProducto.FillColor2 = System.Drawing.Color.SkyBlue;
-            this.btnVerProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerProducto.ForeColor = System.Drawing.Color.White;
-            this.btnVerProducto.Image = global::pryGestionInventario2.Properties.Resources.producto_ver;
-            this.btnVerProducto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnVerProducto.Location = new System.Drawing.Point(12, 49);
-            this.btnVerProducto.Name = "btnVerProducto";
-            this.btnVerProducto.Size = new System.Drawing.Size(191, 45);
-            this.btnVerProducto.TabIndex = 25;
-            this.btnVerProducto.Text = "Ver Productos";
-            this.btnVerProducto.Click += new System.EventHandler(this.btnVerProducto_Click);
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
@@ -226,22 +228,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation5;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // btnCerrar
             // 
@@ -262,6 +264,27 @@
             this.btnCerrar.TabIndex = 29;
             this.btnCerrar.Text = "X";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnContactos
+            // 
+            this.guna2Transition1.SetDecoration(this.btnContactos, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnContactos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnContactos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnContactos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnContactos.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnContactos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnContactos.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnContactos.FillColor2 = System.Drawing.Color.SkyBlue;
+            this.btnContactos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContactos.ForeColor = System.Drawing.Color.White;
+            this.btnContactos.Image = global::pryGestionInventario2.Properties.Resources.reporte;
+            this.btnContactos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnContactos.Location = new System.Drawing.Point(12, 319);
+            this.btnContactos.Name = "btnContactos";
+            this.btnContactos.Size = new System.Drawing.Size(191, 45);
+            this.btnContactos.TabIndex = 30;
+            this.btnContactos.Text = "Contactos";
+            this.btnContactos.Click += new System.EventHandler(this.btnContactos_Click);
             // 
             // frmMenu
             // 
@@ -297,6 +320,7 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2Button btnCerrar;
+        private Guna.UI2.WinForms.Guna2GradientButton btnContactos;
     }
 }
 

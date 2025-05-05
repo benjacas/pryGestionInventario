@@ -20,6 +20,10 @@ namespace pryGestionInventario2
 
         private void frmProducto_Load(object sender, EventArgs e)
         {
+            btnEsconder.Visible = false;
+  
+            panelMenu.Width = 51;
+            
 
         }
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -27,7 +31,7 @@ namespace pryGestionInventario2
             btnMostrar.Visible = false;
             btnEsconder.Visible = true;
             panelMenu.Visible = false;
-            panelMenu.Width = 51;
+            panelMenu.Width = 225;
             guna2Transition1.ShowSync(panelMenu);
         }
 
@@ -36,13 +40,15 @@ namespace pryGestionInventario2
             panelMenu.Visible = false;
             btnEsconder.Visible = false;
             btnMostrar.Visible = true;
-            panelMenu.Width = 225;
+            panelMenu.Width = 51;
             guna2Transition1.ShowSync(panelMenu);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
+            frmLogin v = new frmLogin();
+            v.ShowDialog();
         }
 
         private void btnVerProducto_Click(object sender, EventArgs e)
@@ -72,6 +78,12 @@ namespace pryGestionInventario2
         private void btnBorrarProductos_Click(object sender, EventArgs e)
         {
             frmEliminarProducto v = new frmEliminarProducto();
+            v.ShowDialog();
+        }
+
+        private void btnContactos_Click(object sender, EventArgs e)
+        {
+            frmAgregarContactos v = new frmAgregarContactos();
             v.ShowDialog();
         }
     }

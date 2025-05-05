@@ -46,7 +46,7 @@ namespace pryGestionInventario2
                     MessageBox.Show("Bienvenido " + usuario);
                     frmMenu v = new frmMenu();
                     v.ShowDialog();
-                    this.Close();
+                    Close();
                 }
                 else
                 {
@@ -86,7 +86,6 @@ namespace pryGestionInventario2
             }
             
 
-            
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

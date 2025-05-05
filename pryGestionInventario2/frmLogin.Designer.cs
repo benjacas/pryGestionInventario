@@ -75,7 +75,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(9, 188);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(200, 45);
-            this.btnIngresar.TabIndex = 6;
+            this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -95,7 +95,7 @@
             this.btnRegistrarse.Location = new System.Drawing.Point(9, 259);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(199, 45);
-            this.btnRegistrarse.TabIndex = 8;
+            this.btnRegistrarse.TabIndex = 4;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
@@ -118,7 +118,7 @@
             this.txtUsuario.PlaceholderText = "Nombre de Usuario";
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.Size = new System.Drawing.Size(200, 36);
-            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TabIndex = 1;
             // 
             // txtContraseña
             // 
@@ -196,7 +196,7 @@
             this.panelRegistro.Location = new System.Drawing.Point(480, 52);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Size = new System.Drawing.Size(219, 349);
-            this.panelRegistro.TabIndex = 11;
+            this.panelRegistro.TabIndex = 4;
             // 
             // txtConfirmarContraseña
             // 
@@ -217,7 +217,7 @@
             this.txtConfirmarContraseña.PlaceholderText = "Confirmar Contraseña";
             this.txtConfirmarContraseña.SelectedText = "";
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(200, 36);
-            this.txtConfirmarContraseña.TabIndex = 10;
+            this.txtConfirmarContraseña.TabIndex = 4;
             this.txtConfirmarContraseña.UseSystemPasswordChar = true;
             // 
             // txtConfirmarUsuario
@@ -239,7 +239,7 @@
             this.txtConfirmarUsuario.PlaceholderText = "Confirmar Usuario";
             this.txtConfirmarUsuario.SelectedText = "";
             this.txtConfirmarUsuario.Size = new System.Drawing.Size(200, 36);
-            this.txtConfirmarUsuario.TabIndex = 11;
+            this.txtConfirmarUsuario.TabIndex = 3;
             // 
             // btnRegistrar
             // 
@@ -254,7 +254,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(8, 259);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(200, 45);
-            this.btnRegistrar.TabIndex = 6;
+            this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrarse";
             this.btnRegistrar.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
@@ -305,7 +305,7 @@
             this.btnRegistroALogin.Location = new System.Drawing.Point(142, 310);
             this.btnRegistroALogin.Name = "btnRegistroALogin";
             this.btnRegistroALogin.Size = new System.Drawing.Size(66, 25);
-            this.btnRegistroALogin.TabIndex = 8;
+            this.btnRegistroALogin.TabIndex = 6;
             this.btnRegistroALogin.Text = "Login";
             this.btnRegistroALogin.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
@@ -328,7 +328,7 @@
             this.txtRegistrarUsuario.PlaceholderText = "Nombre de Usuario";
             this.txtRegistrarUsuario.SelectedText = "";
             this.txtRegistrarUsuario.Size = new System.Drawing.Size(200, 36);
-            this.txtRegistrarUsuario.TabIndex = 3;
+            this.txtRegistrarUsuario.TabIndex = 1;
             // 
             // btnCerrar
             // 
@@ -354,8 +354,8 @@
             this.ClientSize = new System.Drawing.Size(750, 442);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.panelIngresar);
             this.Controls.Add(this.panelRegistro);
+            this.Controls.Add(this.panelIngresar);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
