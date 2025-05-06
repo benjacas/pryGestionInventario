@@ -32,26 +32,26 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRegistrarse = new Guna.UI2.WinForms.Guna2Button();
-            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelIngresar = new Guna.UI2.WinForms.Guna2Panel();
             this.panelRegistro = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtConfirmarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtConfirmarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtRegistrarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnRegistroALogin = new Guna.UI2.WinForms.Guna2Button();
-            this.txtRegistrarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCerrar = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtConfirmarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtConfirmarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRegistrarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRegistrarUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnRegistrarse = new Guna.UI2.WinForms.Guna2Button();
+            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelIngresar.SuspendLayout();
             this.panelRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -78,79 +78,6 @@
             this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.Animated = true;
-            this.btnRegistrarse.AutoRoundedCorners = true;
-            this.btnRegistrarse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrarse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrarse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistrarse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegistrarse.FillColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarse.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarse.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrarse.Image = global::pryGestionInventario2.Properties.Resources.depositphotos_477186434_stock_illustration_arrow_button_right_icon;
-            this.btnRegistrarse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnRegistrarse.Location = new System.Drawing.Point(9, 259);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(199, 45);
-            this.btnRegistrarse.TabIndex = 4;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Animated = true;
-            this.txtUsuario.BorderRadius = 8;
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.DefaultText = "";
-            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
-            this.txtUsuario.Location = new System.Drawing.Point(9, 69);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PlaceholderText = "Nombre de Usuario";
-            this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 36);
-            this.txtUsuario.TabIndex = 1;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Animated = true;
-            this.txtContraseña.BorderRadius = 8;
-            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraseña.DefaultText = "";
-            this.txtContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
-            this.txtContraseña.Location = new System.Drawing.Point(9, 120);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PlaceholderText = "Contraseña";
-            this.txtContraseña.SelectedText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(200, 36);
-            this.txtContraseña.TabIndex = 2;
-            this.txtContraseña.UseSystemPasswordChar = true;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::pryGestionInventario2.Properties.Resources.brave_screenshot_img_freepik1;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-6, -1);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(317, 443);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -198,6 +125,79 @@
             this.panelRegistro.Size = new System.Drawing.Size(219, 349);
             this.panelRegistro.TabIndex = 4;
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Animated = true;
+            this.btnRegistrar.AutoRoundedCorners = true;
+            this.btnRegistrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(8, 259);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(200, 45);
+            this.btnRegistrar.TabIndex = 5;
+            this.btnRegistrar.Text = "Registrarse";
+            this.btnRegistrar.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(199, 31);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Registrar Usuario";
+            // 
+            // btnRegistroALogin
+            // 
+            this.btnRegistroALogin.Animated = true;
+            this.btnRegistroALogin.AutoRoundedCorners = true;
+            this.btnRegistroALogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistroALogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistroALogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistroALogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistroALogin.FillColor = System.Drawing.Color.Transparent;
+            this.btnRegistroALogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRegistroALogin.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistroALogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnRegistroALogin.Location = new System.Drawing.Point(142, 310);
+            this.btnRegistroALogin.Name = "btnRegistroALogin";
+            this.btnRegistroALogin.Size = new System.Drawing.Size(66, 25);
+            this.btnRegistroALogin.TabIndex = 6;
+            this.btnRegistroALogin.Text = "Login";
+            this.btnRegistroALogin.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BorderRadius = 10;
+            this.btnCerrar.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.btnCerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(705, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(33, 27);
+            this.btnCerrar.TabIndex = 12;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::pryGestionInventario2.Properties.Resources.brave_screenshot_img_freepik1;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-6, -1);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(317, 443);
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // txtConfirmarContraseña
             // 
             this.txtConfirmarContraseña.Animated = true;
@@ -241,33 +241,6 @@
             this.txtConfirmarUsuario.Size = new System.Drawing.Size(200, 36);
             this.txtConfirmarUsuario.TabIndex = 3;
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Animated = true;
-            this.btnRegistrar.AutoRoundedCorners = true;
-            this.btnRegistrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(8, 259);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(200, 45);
-            this.btnRegistrar.TabIndex = 5;
-            this.btnRegistrar.Text = "Registrarse";
-            this.btnRegistrar.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 31);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Registrar Usuario";
-            // 
             // txtRegistrarContraseña
             // 
             this.txtRegistrarContraseña.Animated = true;
@@ -290,25 +263,6 @@
             this.txtRegistrarContraseña.TabIndex = 2;
             this.txtRegistrarContraseña.UseSystemPasswordChar = true;
             // 
-            // btnRegistroALogin
-            // 
-            this.btnRegistroALogin.Animated = true;
-            this.btnRegistroALogin.AutoRoundedCorners = true;
-            this.btnRegistroALogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistroALogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistroALogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistroALogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegistroALogin.FillColor = System.Drawing.Color.Transparent;
-            this.btnRegistroALogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRegistroALogin.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistroALogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnRegistroALogin.Location = new System.Drawing.Point(142, 310);
-            this.btnRegistroALogin.Name = "btnRegistroALogin";
-            this.btnRegistroALogin.Size = new System.Drawing.Size(66, 25);
-            this.btnRegistroALogin.TabIndex = 6;
-            this.btnRegistroALogin.Text = "Login";
-            this.btnRegistroALogin.Click += new System.EventHandler(this.guna2Button4_Click);
-            // 
             // txtRegistrarUsuario
             // 
             this.txtRegistrarUsuario.Animated = true;
@@ -330,22 +284,68 @@
             this.txtRegistrarUsuario.Size = new System.Drawing.Size(200, 36);
             this.txtRegistrarUsuario.TabIndex = 1;
             // 
-            // btnCerrar
+            // txtContraseña
             // 
-            this.btnCerrar.BorderRadius = 10;
-            this.btnCerrar.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.btnCerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(705, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 27);
-            this.btnCerrar.TabIndex = 12;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.txtContraseña.Animated = true;
+            this.txtContraseña.BorderRadius = 8;
+            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContraseña.DefaultText = "";
+            this.txtContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContraseña.IconLeft = global::pryGestionInventario2.Properties.Resources.icono_clave_contrasena_1134231_5107;
+            this.txtContraseña.Location = new System.Drawing.Point(9, 120);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PlaceholderText = "Contraseña";
+            this.txtContraseña.SelectedText = "";
+            this.txtContraseña.Size = new System.Drawing.Size(200, 36);
+            this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.UseSystemPasswordChar = true;
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.Animated = true;
+            this.btnRegistrarse.AutoRoundedCorners = true;
+            this.btnRegistrarse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrarse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrarse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrarse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistrarse.FillColor = System.Drawing.Color.Transparent;
+            this.btnRegistrarse.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarse.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistrarse.Image = global::pryGestionInventario2.Properties.Resources.depositphotos_477186434_stock_illustration_arrow_button_right_icon;
+            this.btnRegistrarse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnRegistrarse.Location = new System.Drawing.Point(9, 259);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(199, 45);
+            this.btnRegistrarse.TabIndex = 4;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Animated = true;
+            this.txtUsuario.BorderRadius = 8;
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuario.DefaultText = "";
+            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.IconLeft = global::pryGestionInventario2.Properties.Resources.User_icon_2_svg;
+            this.txtUsuario.Location = new System.Drawing.Point(9, 69);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PlaceholderText = "Nombre de Usuario";
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.Size = new System.Drawing.Size(200, 36);
+            this.txtUsuario.TabIndex = 1;
             // 
             // frmLogin
             // 
@@ -354,8 +354,8 @@
             this.ClientSize = new System.Drawing.Size(750, 442);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.panelIngresar);
+            this.Controls.Add(this.panelRegistro);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -363,11 +363,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelIngresar.ResumeLayout(false);
             this.panelIngresar.PerformLayout();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

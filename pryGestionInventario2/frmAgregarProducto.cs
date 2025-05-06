@@ -32,20 +32,13 @@ namespace pryGestionInventario2
             CargarProductos();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         public void CargarCategorias()
         {
@@ -121,7 +114,45 @@ namespace pryGestionInventario2
 
         }
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
+
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+
+                try
+                {
+                    nuevoProducto.Nombre = txtNombre.Text;
+                    nuevoProducto.Descripcion = txtDescripcion.Text;
+                    nuevoProducto.Stock = Convert.ToInt32(numStock.Value);
+                    nuevoProducto.Precio = numPrecio.Value;
+                    nuevoProducto.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
+
+                    Producto.AgregarProducto(nuevoProducto);
+
+                    CargarCategorias();
+                    CargarProductos();
+
+                    ControlDeCargaDatos();
+                    CargarProductos();
+                    txtNombre.Clear();
+                    txtDescripcion.Clear();
+                    numPrecio.Value = 0;
+                    numStock.Value = 0;
+                    cmbCategorias.SelectedIndex = -1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocurrió un error: {ex.Message}");
+                }
+                
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombre_TextChanged_1(object sender, EventArgs e)
         {
             if (txtNombre.Text != "")
             {
@@ -135,45 +166,7 @@ namespace pryGestionInventario2
             }
         }
 
-        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbCategorias.SelectedIndex > -1)
-            {
-                btnAgregar.Enabled = true;
-            }
-            else
-            {
-                btnAgregar.Enabled = false;
-            }
-        }
-
-        private void numStock_ValueChanged(object sender, EventArgs e)
-        {
-            if (numStock.Value > 0)
-            {
-                cmbCategorias.Enabled = true;
-            }
-            else
-            {
-                numStock.BackColor = Color.Red;
-                cmbCategorias.Enabled = false;
-            }
-        }
-
-        private void numPrecio_ValueChanged(object sender, EventArgs e)
-        {
-            if (numPrecio.Value > 0)
-            {
-                numStock.Enabled = true;
-            }
-            else
-            {
-                numPrecio.BackColor = Color.Red;
-                numStock.Enabled = false;
-            }
-        }
-
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        private void txtDescripcion_TextChanged_1(object sender, EventArgs e)
         {
             if (txtDescripcion.Text != "")
             {
@@ -187,38 +180,42 @@ namespace pryGestionInventario2
             }
         }
 
-        private void btnAgregar_Click_1(object sender, EventArgs e)
+        private void numPrecio_ValueChanged_1(object sender, EventArgs e)
         {
-            try
+            if (numPrecio.Value > 0)
             {
-                nuevoProducto.Nombre = txtNombre.Text;
-                nuevoProducto.Descripcion = txtDescripcion.Text;
-                nuevoProducto.Stock = Convert.ToInt32(numStock.Value);
-                nuevoProducto.Precio = numPrecio.Value;
-                nuevoProducto.CategoriaId = Convert.ToInt32(cmbCategorias.SelectedValue);
-
-                Producto.AgregarProducto(nuevoProducto);
-
-                CargarCategorias();
-                CargarProductos();
-
-                ControlDeCargaDatos();
-                CargarProductos();
-                txtNombre.Clear();
-                txtDescripcion.Clear();
-                numPrecio.Value = 0;
-                numStock.Value = 0;
-                cmbCategorias.SelectedIndex = -1;
+                numStock.Enabled = true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+                numPrecio.BackColor = Color.Red;
+                numStock.Enabled = false;
             }
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void numStock_ValueChanged_1(object sender, EventArgs e)
         {
-            this.Close();
+            if (numStock.Value > 0)
+            {
+                cmbCategorias.Enabled = true;
+            }
+            else
+            {
+                numStock.BackColor = Color.Red;
+                cmbCategorias.Enabled = false;
+            }
+        }
+
+        private void cmbCategorias_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbCategorias.SelectedIndex > -1)
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }

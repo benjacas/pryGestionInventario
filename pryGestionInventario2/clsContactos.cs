@@ -55,7 +55,16 @@ namespace pryGestionInventario2
             }
         }
 
-        public DataTable BuscarContacto(string texto)
+        public void CargarContactos(clsContactos contacto, DataGridView dgv)
+        {
+            DataTable contactos = contacto.ObtenerContactos();
+            if (contactos != null)
+            {
+                dgv.DataSource = contactos;
+            }
+        }
+
+        /*public DataTable BuscarContacto(string texto)
         {
             string query = "SELECT Codigo, Nombre, Apellido, Telefono, Correo FROM Contactos " +
                            "WHERE Nombre LIKE @Texto OR Apellido LIKE @Texto";
@@ -103,16 +112,9 @@ namespace pryGestionInventario2
             {
                 MessageBox.Show("Error al eliminar contacto: " + ex.Message);
             }
-        }
+        }*/
 
-        public void CargarContactos(clsContactos contacto, DataGridView dgv)
-        {
-            DataTable contactos = contacto.ObtenerContactos();
-            if (contactos != null)
-            {
-                dgv.DataSource = contactos;
-            }
-        }
+
 
     }
 }

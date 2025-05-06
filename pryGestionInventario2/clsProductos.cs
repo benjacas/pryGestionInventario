@@ -71,7 +71,7 @@ namespace pryGestionInventario2
 
         /*
          Se arma una consulta SQL que une las tablas Productos y Categorias, y filtra según el texto ingresado.
-         LIKE permite buscar coincidencias parciales. Por ejemplo, si buscás "tele", encuentra "televisor", "telecomando"
+         LIKE permite buscar coincidencias parciales. Por ejemplo, si buscás "tele", encuentra "televisor"
          */
         public DataTable BuscarProductoPorTexto(string texto)
         {

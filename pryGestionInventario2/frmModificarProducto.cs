@@ -99,5 +99,77 @@ namespace pryGestionInventario2
         {
             this.Close();
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "")
+            {
+                txtNombre.Enabled = true;
+            }
+            else
+            {
+                txtDescripcion.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                txtDescripcion.Enabled = true;
+            }
+            else
+            {
+                txtDescripcion.Enabled = false;
+            }
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDescripcion.Text != "")
+            {
+                numPrecio.Enabled = true;
+            }
+            else
+            {
+                numPrecio.Enabled = false;
+            }
+        }
+
+        private void numPrecio_ValueChanged(object sender, EventArgs e)
+        {
+            if (numPrecio.Value > 0)
+            {
+                numStock.Enabled = true;
+            }
+            else
+            {
+                numStock.Enabled = false;
+            }
+        }
+
+        private void numStock_ValueChanged(object sender, EventArgs e)
+        {
+            if (numStock.Value > 0)
+            {
+                cmbCategorias.Enabled = true;
+            }
+            else
+            {
+                cmbCategorias.Enabled = false;
+            }
+        }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbCategorias.SelectedIndex > -1)
+            {
+                btnModificar.Enabled = true;
+            }
+            else
+            {
+                btnModificar.Enabled = false;
+            }
+        }
     }
 }

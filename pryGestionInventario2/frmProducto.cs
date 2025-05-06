@@ -47,8 +47,6 @@ namespace pryGestionInventario2
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin v = new frmLogin();
-            v.ShowDialog();
         }
 
         private void btnVerProducto_Click(object sender, EventArgs e)

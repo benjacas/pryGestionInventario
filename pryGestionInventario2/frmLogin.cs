@@ -44,9 +44,11 @@ namespace pryGestionInventario2
                 if (Usuarios.VerificarLogin(usuario, contraseña))
                 {
                     MessageBox.Show("Bienvenido " + usuario);
+                    
                     frmMenu v = new frmMenu();
+                    
                     v.ShowDialog();
-                    Close();
+                    
                 }
                 else
                 {
@@ -57,6 +59,8 @@ namespace pryGestionInventario2
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}");
             }
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
